@@ -80,10 +80,13 @@ nav {
     flex-direction: row;
     justify-content: center; }
     #movie-list .content img {
+      height: 300px;
       margin: 2%;
       padding: 10px; }
     #movie-list .content p {
-      text-align: center; }
+      display: flex;
+      text-align: center;
+      justify-content: center; }
 
 body {
   font-family: "Jomolhari", serif;

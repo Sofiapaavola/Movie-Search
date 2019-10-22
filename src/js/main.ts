@@ -1,7 +1,6 @@
 
-
-const url = `http://www.omdbapi.com/?s=${movieName}&apikey=b8f7779`; 
 let movieName = "war"; 
+let url = `http://www.omdbapi.com/?s=${movieName}&apikey=b8f7779`; 
 
 const imageSource = (movieUrl) => { 
     return `<img src="${movieUrl}"></img>`
@@ -20,16 +19,26 @@ export interface IMovies {
     Search: IMovies[],
 }
 
+// const searchMovies = () => { 
+//     const userInput = document.getElementById("search-bar") as HTMLInputElement;
+//     movieName = userInput.value; 
+//     movieInfo(movieName); 
+// }
 
-const searchMovies = () => { 
-    const userInput = document.getElementById("search-bar") as HTMLInputElement;
-    movieName = userInput.value; 
-    buildList(); 
-     
-}
+const searchEvent = document.getElementById("search-bar");
+searchEvent.addEventListener("keyup", (event) => {
+   console.log(event);
+   if (event.keyCode === 13) {
+       console.log("in here");
+       const filmToSearch =  (<HTMLInputElement>document.getElementById("search-bar")).value;
+       const filmUrl = `http://www.omdbapi.com/?s=${filmToSearch}&apikey=94d4e1cf`;
+       movieInfo(filmUrl);
+   }
+})
 
 const buildList = (data: IMoviesResponse) => { 
     const ul = document.getElementsByClassName("content")[0];
+    ul.innerHTML = "";
     data["Search"].forEach((movie) => { 
         let li = document.createElement("li"); 
         li.innerHTML = imageSource(movie.Poster) + movieText(movie.Title, movie.Year);
