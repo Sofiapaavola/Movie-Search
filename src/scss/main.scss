@@ -1,0 +1,21 @@
+// vendor imports 
+
+@import 'vendor/reset';
+
+// module imports 
+@import 'modules/variables';
+@import 'modules/typography';
+@import 'modules/responsiveness';
+ 
+// components imports
+
+@import 'components/nav';
+@import 'components/movie-list';
+
+
+
+body { 
+    font-family: $font-family; 
+    font-size: $font-size;
+    background-color: bisque;
+}
