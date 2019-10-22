@@ -10,17 +10,20 @@ nav {
 
     ul.links { 
         display: none;
+        height: $navbar-height;
         position: relative;
         
         #page-title { 
             font-size: $navbar-height - 20px;
+            margin: 5px;
         }
 
         .movie-search-bar .icon {
                 position: absolute;
                 top: 40%;
                 z-index: 1;
-                margin-left: 37px;
+                margin-left: 30px;
+                top: 20px;
                 color: $title-font-color;
             }
         
@@ -31,7 +34,7 @@ nav {
         }
 
         li { 
-            padding: 16px;
+            padding: 8px;
             font-size: 1.2em;
             font-weight: bold;
 
@@ -41,7 +44,6 @@ nav {
                 background: $nav-bar-color;
                 border: $title-font-color 2px solid;
                 font-size: 10pt;
-                float: left;
                 color: $title-font-color;
                 padding-left: 45px;
                 -webkit-border-radius: 5px;
