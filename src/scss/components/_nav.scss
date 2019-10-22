@@ -1,19 +1,28 @@
 nav {
-    background-color: peachpuff;
-    border: 0.5px solid palevioletred;
+    background-color: $nav-bar-color;
     position: fixed;
     top: 0;
     left: 0;
     display: block;
     width: 100vw;
     height: $navbar-height;
-
-    i { 
-        padding: 16px;
-    }
+    color: $title-font-color;
 
     ul.links { 
         display: none;
+        position: relative;
+        
+        #page-title { 
+            font-size: $navbar-height - 20px;
+        }
+
+        .movie-search-bar .icon {
+                position: absolute;
+                top: 40%;
+                z-index: 1;
+                margin-left: 37px;
+                color: $title-font-color;
+            }
         
         @include sm { 
             display: flex; 
@@ -25,6 +34,30 @@ nav {
             padding: 16px;
             font-size: 1.2em;
             font-weight: bold;
+
+            #search-bar { 
+                width: 300px;
+                height: 40px;
+                background: $nav-bar-color;
+                border: $title-font-color 2px solid;
+                font-size: 10pt;
+                float: left;
+                color: $title-font-color;
+                padding-left: 45px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+
+                &:active, &:hover, &:focus{
+                    outline:none;
+                    background: white;
+                    // -webkit-transition: background .55s ease;
+                    // -moz-transition: background .55s ease;
+                    // -ms-transition: background .55s ease;
+                    // -o-transition: background .55s ease;
+                    // transition: background .55s ease;
+                }
+            }
         }
     }
 }

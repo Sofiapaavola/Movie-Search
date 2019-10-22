@@ -6,7 +6,7 @@
         <title>Fun and Fresh Movies</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Jomolhari&display=swap" rel="stylesheet">
+        <link href="//db.onlinewebfonts.com/c/f82a69a125aa89da6962d40cd065a786?family=Blackout" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" media="screen" href="dist/main.css">
         <script src="https://kit.fontawesome.com/0bddc79600.js" crossorigin="anonymous"></script>
         <script src="dist/main.js" async defer type="module"></script>
@@ -14,8 +14,11 @@
     <body>
         <nav>
             <ul class="links">
-                <li>movies. <i class="fas fa-video"></i></li>
-                <li> <input id="search-bar" placeholder="Search for a movie..." type="search">  </li>
+                <li id="page-title">my flicks.</li>
+                <div class="movie-search-bar">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <li> <input id="search-bar" placeholder="Search for a movie..." type="search"> </li>
+                </div>
             </ul>
         </nav>
         <main id="movie-list">

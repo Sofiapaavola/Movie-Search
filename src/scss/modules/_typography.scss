@@ -1,2 +1,16 @@
 $font-size: 16px; 
-$font-family: 'Jomolhari', serif;
+$font-family: 'Blackout', cursive;
+$title-font-color: #F64C72;
+$theme-color-one: #553D67;
+$theme-color-two: #99738E;
+$nav-bar-color: #242582;
+
+
+@import url(//db.onlinewebfonts.com/c/f82a69a125aa89da6962d40cd065a786?family=Blackout);
+@font-face {font-family: "Blackout"; 
+    src: url("//db.onlinewebfonts.com/t/f82a69a125aa89da6962d40cd065a786.eot"); 
+    src: url("//db.onlinewebfonts.com/t/f82a69a125aa89da6962d40cd065a786.eot?#iefix") format("embedded-opentype"), 
+    url("//db.onlinewebfonts.com/t/f82a69a125aa89da6962d40cd065a786.woff2") format("woff2"), 
+    url("//db.onlinewebfonts.com/t/f82a69a125aa89da6962d40cd065a786.woff") format("woff"), 
+    url("//db.onlinewebfonts.com/t/f82a69a125aa89da6962d40cd065a786.ttf") format("truetype"), 
+    url("//db.onlinewebfonts.com/t/f82a69a125aa89da6962d40cd065a786.svg#Blackout") format("svg"); }
