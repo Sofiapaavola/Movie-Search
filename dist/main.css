@@ -68,6 +68,10 @@ nav {
     nav ul.links #page-title {
       font-size: 40px;
       margin: 5px; }
+    nav ul.links .movie-extension-links li {
+      display: flex;
+      flex-direction: column;
+      align-content: flex-end; }
     nav ul.links .movie-search-bar .icon {
       position: absolute;
       top: 40%;
