@@ -1,99 +1,95 @@
 nav {
-    background-color: $nav-bar-color;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100vw;
-    z-index: 2; 
+  background-color: $nav-bar-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  z-index: 2;
+  height: $navbar-height;
+  color: $title-font-color;
+
+  .links {
     height: $navbar-height;
-    color: $title-font-color;
+    position: relative;
 
-    ul.links { 
-        display: none;
-        height: $navbar-height;
-        position: relative;
-        
-        #page-title { 
-            font-size: $navbar-height - 20px;
-            margin: 5px;
-        }
-
-        li { 
-            padding: 8px;
-            font-size: 1.2em;
-            font-weight: bold;
-            
-            #search-bar { 
-                width: 300px;
-                height: 40px;
-                background: $nav-bar-color;
-                border: $title-font-color 2px solid;
-                font-size: 10pt;
-                color: $title-font-color;
-                padding-left: 45px;
-                -webkit-border-radius: 5px;
-                -moz-border-radius: 5px;
-                border-radius: 5px;
-
-                &:active, &:hover, &:focus{
-                    outline:none;
-                    background: white;
-                }
-   
-            }
-        }
-
-        .content-for-movie-selectors { 
-            display: flex; 
-        }
-
-        .movie-search-bar .icon {
-                position: absolute;
-                top: 40%;
-                z-index: 1;
-                margin-left: 30px;
-                top: 20px;
-                color: $title-font-color;
-        }
-
-        .movie-extension-links { 
-            display: flex; 
-            flex-direction: column;
-            justify-content: space-around;
-
-            li { 
-                font-size: 20px;
-
-                &:hover { 
-                    cursor: pointer;
-                }
-
-                .dropdown {
-                    position: relative;
-            
-                    .dropdown-content {
-                        display: none;
-                        position: absolute;
-                        background-color: #f1f1f1;
-                        min-width: 160px;
-                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                        z-index: 1;
-        
-                        li { 
-                            display: none; 
-                            padding: none;
-                            font-size: $font-size; 
-                        }
-                    }
-                }
-            }
-        }
-        
-        @include sm { 
-            display: flex; 
-            flex-direction: row;
-            justify-content: space-between;
-        }
+    #page-title {
+      font-size: $navbar-height - 20px;
+      margin: 5px;
     }
+
+    #search-bar {
+      width: 300px;
+      height: 40px;
+      margin-right: 10px; 
+      margin-top: 10px;
+      background: $nav-bar-color;
+      border: $title-font-color 2px solid;
+      font-size: 10pt;
+      color: $title-font-color;
+      padding-left: 45px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+
+      &:active,
+      &:hover,
+      &:focus {
+        outline: none;
+        background: white;
+      }
+    }
+
+    .content-for-movie-selectors {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .movie-search-bar .icon {
+      position: absolute;
+      top: 40%;
+      z-index: 1;
+      margin-left: 20px;
+      top: 20px;
+      color: $title-font-color;
+    }
+
+    .movie-extension-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      h2 {
+        font-size: 20px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      div.dropdown {
+        position: relative;
+
+        p { 
+            font-size:20px;
+        }
+
+        ul.dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: $main-background-color;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      }
+    }
+
+    @include sm {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 }

@@ -61,53 +61,63 @@ nav {
   z-index: 2;
   height: 60px;
   color: #F64C72; }
-  nav ul.links {
-    display: none;
+  nav .links {
     height: 60px;
     position: relative; }
-    nav ul.links #page-title {
+    nav .links #page-title {
       font-size: 40px;
       margin: 5px; }
-    nav ul.links .content-for-movie-selectors {
-      display: flex; }
-    nav ul.links .movie-search-bar .icon {
+    nav .links #search-bar {
+      width: 300px;
+      height: 40px;
+      margin-right: 10px;
+      margin-top: 10px;
+      background: #242582;
+      border: #F64C72 2px solid;
+      font-size: 10pt;
+      color: #F64C72;
+      padding-left: 45px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px; }
+      nav .links #search-bar:active, nav .links #search-bar:hover, nav .links #search-bar:focus {
+        outline: none;
+        background: white; }
+    nav .links .content-for-movie-selectors {
+      display: flex;
+      justify-content: space-between; }
+    nav .links .movie-search-bar .icon {
       position: absolute;
       top: 40%;
       z-index: 1;
-      margin-left: 30px;
+      margin-left: 20px;
       top: 20px;
       color: #F64C72; }
-    nav ul.links .movie-extension-links {
+    nav .links .movie-extension-links {
       display: flex;
       flex-direction: column;
       justify-content: space-around; }
-      nav ul.links .movie-extension-links li {
+      nav .links .movie-extension-links h2 {
         font-size: 20px; }
-        nav ul.links .movie-extension-links li:hover {
+        nav .links .movie-extension-links h2:hover {
           cursor: pointer; }
+      nav .links .movie-extension-links div.dropdown {
+        position: relative; }
+        nav .links .movie-extension-links div.dropdown p {
+          font-size: 20px; }
+        nav .links .movie-extension-links div.dropdown ul.dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #2F2FA2;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          font-family: Arial, Helvetica, sans-serif; }
     @media (min-width: 576px) {
-      nav ul.links {
+      nav .links {
         display: flex;
         flex-direction: row;
         justify-content: space-between; } }
-    nav ul.links li {
-      padding: 8px;
-      font-size: 1.2em;
-      font-weight: bold; }
-      nav ul.links li #search-bar {
-        width: 300px;
-        height: 40px;
-        background: #242582;
-        border: #F64C72 2px solid;
-        font-size: 10pt;
-        color: #F64C72;
-        padding-left: 45px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px; }
-        nav ul.links li #search-bar:active, nav ul.links li #search-bar:hover, nav ul.links li #search-bar:focus {
-          outline: none;
-          background: white; }
 
 #movie-list {
   width: 100vw;

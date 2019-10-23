@@ -47,12 +47,12 @@ export const filterMovies = (movies: IMovies[], year: number): IMovies[] => {
     return filteredMovies;
  }
 
- const filterDropdown = document.getElementById("filterTag"); 
-filterDropdown.addEventListener("click", (event) => { 
-    const ul = document.getElementsByClassName("filterContent")[1];
+//  const filterDropdown = document.getElementById("filterTag"); 
+// filterDropdown.addEventListener("click", (event) => { 
+//     const ul = document.getElementsByClassName("filterContent")[1];
    
-        movieInfo(filmUrl);
-})
+//         movieInfo(filmUrl);
+// })
 
 $("#filterTag").click(function(){
     $("#myDropdown").toggle();

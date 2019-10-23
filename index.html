@@ -1,46 +1,62 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Fun and Fresh Movies</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="//db.onlinewebfonts.com/c/f82a69a125aa89da6962d40cd065a786?family=Blackout" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" type="text/css" media="screen" href="dist/main.css">
-        <script src="https://kit.fontawesome.com/0bddc79600.js" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="dist/main.js" async defer type="module"></script>
-    </head>
-    <body>
-        <nav>
-            <ul class="links">
-                <li id="page-title">my flicks.</li>
-                <div class="content-for-movie-selectors"> 
-                    <div class="movie-search-bar">
-                        <span class="icon"><i class="fa fa-search"></i></span>
-                        <li> <input id="search-bar" placeholder="Search for a movie..." type="search"> </li> 
-                    </div>
-                    <div class="movie-extension-links"> 
-                        <p id="favesTag">my faves.</p>
-                        <div class="dropdown"> 
-                            <p id="filterTag">filter.
-                                <ul id="myDropdown" class="dropdown-content">
-                                    <li>hi</li>
-                                    <li>ho</li>
-                                    <li>he</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </ul>
-        </nav>
-        <main id="movie-list">
-            <ul class="content">
-                <li>
-                </li>
-            </ul>  
-        </main> 
-    </body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Fun and Fresh Movies</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="//db.onlinewebfonts.com/c/f82a69a125aa89da6962d40cd065a786?family=Blackout"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="dist/main.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/0bddc79600.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="dist/main.js" async defer type="module"></script>
+  </head>
+  <body>
+    <nav>
+      <section class="links">
+        <h1 id="page-title">my flicks.</h1>
+        <div class="content-for-movie-selectors">
+          <div class="movie-search-bar">
+            <span class="icon"><i class="fa fa-search"></i></span>
+            <input
+              id="search-bar"
+              placeholder="Search for a movie..."
+              type="search"
+            />
+          </div>
+          <div class="movie-extension-links">
+            <h2 id="favesTag">my faves.</h2>
+            <div class="dropdown">
+              <p id="filterTag">
+                filter.
+              </p>
+              <ul id="myDropdown" class="dropdown-content">
+                <li>hi</li>
+                <li>ho</li>
+                <li>he</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </nav>
+    <main id="movie-list">
+      <ul class="content">
+        <li></li>
+      </ul>
+    </main>
+  </body>
 </html>
