@@ -5,6 +5,7 @@ nav {
     left: 0;
     display: block;
     width: 100vw;
+    z-index: 2; 
     height: $navbar-height;
     color: $title-font-color;
 
@@ -53,11 +54,6 @@ nav {
                 &:active, &:hover, &:focus{
                     outline:none;
                     background: white;
-                    // -webkit-transition: background .55s ease;
-                    // -moz-transition: background .55s ease;
-                    // -ms-transition: background .55s ease;
-                    // -o-transition: background .55s ease;
-                    // transition: background .55s ease;
                 }
             }
         }

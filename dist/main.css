@@ -58,6 +58,7 @@ nav {
   left: 0;
   display: block;
   width: 100vw;
+  z-index: 2;
   height: 60px;
   color: #F64C72; }
   nav ul.links {
@@ -116,7 +117,8 @@ nav {
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center; }
+      text-align: center;
+      width: 300px; }
       #movie-list .content li img {
         height: 400px;
         width: 300px;
@@ -130,6 +132,8 @@ nav {
           -moz-box-shadow: 0 0 5px #F64C72;
           -webkit-box-shadow: 0 0 5px #F64C72;
           box-shadow: 0 0 5px #F64C72; }
+      #movie-list .content li p {
+        padding: 4px; }
 
 body {
   font-family: "Blackout", cursive;
