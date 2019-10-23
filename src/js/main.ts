@@ -1,17 +1,20 @@
 
 let movieName = "war"; 
-let url = `http://www.omdbapi.com/?s=${movieName}&apikey=b8f7779`; 
+let url = `https://www.omdbapi.com/?s=${movieName}&apikey=b8f7779`; 
 
 const imageSource = (movieUrl) => { 
     return `<img src="${movieUrl}"></img>`
 }  
 
 const movieText = (title, year) => { 
-    return `<li><p>"${title}"</p> <p>"${year}"</p></li> `
+    return `<li><p>${title}</p> <p>${year}</p></li> `
 }
 
 const dropdownContent = (year) => { 
-    return `<li>"${year}</li>`
+    // let li = document.createElement("li"); 
+    // li.innerHTML = year;
+    // console.log(dropdownContent)
+     return `<li>${year}</li>`
 }
 
 interface IMovies {
@@ -27,7 +30,7 @@ const searchEvent = document.getElementById("search-bar");
 searchEvent.addEventListener("keyup", (event) => {
    if (event.keyCode === 13) {
        const filmToSearch =  (<HTMLInputElement>document.getElementById("search-bar")).value;
-       const filmUrl = `http://www.omdbapi.com/?s=${filmToSearch}&apikey=94d4e1cf`;
+       const filmUrl = `https://www.omdbapi.com/?s=${filmToSearch}&apikey=94d4e1cf`;
        movieInfo(filmUrl);
    }
 })
@@ -41,7 +44,7 @@ const buildList = (data: IMoviesResponse) => {
         li.innerHTML = imageSource(movie.Poster) + movieText(movie.Title, movie.Year);
         ul.append(li);
     })
-    giveMeTheYears(arrayOfMovies);
+    buildDropdownList(arrayOfMovies);
 }
 
 const filterMovies = (movies: IMovies[], year: number): IMovies[] => {
@@ -49,16 +52,25 @@ const filterMovies = (movies: IMovies[], year: number): IMovies[] => {
     return filteredMovies;
 }
 
-// const buildDropdownList = 
-
 const giveMeTheYears = (movies: IMovies[]) => {
     let listOfYears = [];
     movies.forEach((movie) => {
         let movieYears = movie.Year;
         listOfYears.push(movieYears); 
     })
+    console.log(listOfYears);
     return listOfYears; 
+
 }
+
+const buildDropdownList = (movies) => { 
+    const dropDown = document.getElementById("myDropdown"); 
+    let yearList = giveMeTheYears(movies);
+    yearList.forEach((year) => { 
+        dropDown.innerHTML += dropdownContent(year);
+    })
+}
+
 
 
 $("#filterTag").click(function(){
