@@ -96,7 +96,8 @@ nav {
     nav .links .movie-extension-links {
       display: flex;
       flex-direction: column;
-      justify-content: space-around; }
+      justify-content: space-around;
+      margin-right: 10px; }
       nav .links .movie-extension-links h2 {
         font-size: 20px; }
         nav .links .movie-extension-links h2:hover {
@@ -120,7 +121,6 @@ nav {
         justify-content: space-between; } }
 
 #movie-list {
-  width: 100vw;
   height: 100vh;
   box-sizing: border-box;
   margin-top: 60px;
@@ -154,6 +154,9 @@ nav {
           box-shadow: 0 0 5px #F64C72; }
       #movie-list .content li p {
         padding: 4px; }
+
+html ::-webkit-scrollbar {
+  display: none; }
 
 body {
   font-family: "Blackout", cursive;

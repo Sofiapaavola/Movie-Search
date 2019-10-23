@@ -14,12 +14,12 @@ const dropdownContent = (year) => {
     return `<li>"${year}</li>`
 }
 
-export interface IMovies {
+interface IMovies {
     Title: string,
     Year: number,
     Poster: string,
    }
-   export interface IMoviesResponse {
+   interface IMoviesResponse {
     Search: IMovies[],
 }
 
@@ -35,24 +35,35 @@ searchEvent.addEventListener("keyup", (event) => {
 const buildList = (data: IMoviesResponse) => { 
     const ul = document.getElementsByClassName("content")[0];
     ul.innerHTML = "";
-    data["Search"].forEach((movie) => { 
+    const arrayOfMovies: IMovies[] = data["Search"];
+    arrayOfMovies.forEach((movie) => { 
         let li = document.createElement("li"); 
         li.innerHTML = imageSource(movie.Poster) + movieText(movie.Title, movie.Year);
         ul.append(li);
     })
+    giveMeTheYears(arrayOfMovies);
 }
 
-export const filterMovies = (movies: IMovies[], year: number): IMovies[] => {
+const filterMovies = (movies: IMovies[], year: number): IMovies[] => {
     let filteredMovies = movies.filter(movie  => Number(movie.Year) === Number(year))
     return filteredMovies;
- }
+}
 
-//  const filterDropdown = document.getElementById("filterTag"); 
-// filterDropdown.addEventListener("click", (event) => { 
-//     const ul = document.getElementsByClassName("filterContent")[1];
-   
-//         movieInfo(filmUrl);
-// })
+const giveMeTheYears = (movies: IMovies[]) => {
+    let listOfYears = [];
+    movies.forEach((movie) => {
+        let movieYears = movie.Year;
+        listOfYears.push(movieYears); 
+    })
+    return listOfYears; 
+}
+
+//  const filterDropdown = (data: IMoviesResponse) => { 
+//     const ul = document.getElementsByClassName("dropdown-content");
+//     let li = document.createElement("li"); 
+//     li.innerHTML = dropdownContent(filterMovies());
+//     ul.append(li); 
+// }
 
 $("#filterTag").click(function(){
     $("#myDropdown").toggle();
