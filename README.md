@@ -14,4 +14,4 @@ Build an application using the OMDB api, Javascript Fetch and HTML/CSS to allow 
 5. Persistent favourites - a user's favourites remain on the page even if the page is refreshed!
 
 #### Current status 
-Completed the filter partially and am in the process of creating favourites. 
+Completed the filter that works dynamically. Not started favourites portion yet. 

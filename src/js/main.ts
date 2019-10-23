@@ -10,11 +10,13 @@ const movieText = (title, year) => {
     return `<li><p>${title}</p> <p>${year}</p></li> `
 }
 
-const dropdownContent = (year) => { 
-    // let li = document.createElement("li"); 
-    // li.innerHTML = year;
-    // console.log(dropdownContent)
-     return `<li>${year}</li>`
+const dropdownContent = (movies, year) => { 
+    let li = document.createElement("li"); 
+    li.innerHTML = year;
+    li.addEventListener("click", (event) => { 
+        filterMovies(movies, year)
+    })
+    return li;
 }
 
 interface IMovies {
@@ -35,21 +37,21 @@ searchEvent.addEventListener("keyup", (event) => {
    }
 })
 
-const buildList = (data: IMoviesResponse) => { 
+
+const buildList = (movies: IMovies[]) => { 
     const ul = document.getElementsByClassName("content")[0];
     ul.innerHTML = "";
-    const arrayOfMovies: IMovies[] = data["Search"];
-    arrayOfMovies.forEach((movie) => { 
+    movies.forEach((movie) => { 
         let li = document.createElement("li"); 
         li.innerHTML = imageSource(movie.Poster) + movieText(movie.Title, movie.Year);
         ul.append(li);
     })
-    buildDropdownList(arrayOfMovies);
+    buildDropdownList(movies);
 }
 
-const filterMovies = (movies: IMovies[], year: number): IMovies[] => {
-    let filteredMovies = movies.filter(movie => Number(movie.Year) === Number(year))
-    return filteredMovies;
+const filterMovies = (movies: IMovies[], year: number) => {
+    let filteredMovies = movies.filter(movie => Number(movie.Year) === Number(year));
+    buildList(filteredMovies);
 }
 
 const giveMeTheYears = (movies: IMovies[]) => {
@@ -65,9 +67,11 @@ const giveMeTheYears = (movies: IMovies[]) => {
 
 const buildDropdownList = (movies) => { 
     const dropDown = document.getElementById("myDropdown"); 
+    dropDown.innerHTML = "";
     let yearList = giveMeTheYears(movies);
     yearList.forEach((year) => { 
-        dropDown.innerHTML += dropdownContent(year);
+        const li = dropdownContent(movies, year);
+        dropDown.append(li);
     })
 }
 
@@ -80,7 +84,7 @@ $("#filterTag").click(function(){
 const movieInfo = (url: string) => {  
     fetch(url)
     .then((response) => response.json())
-    .then((data) => buildList(data))
+    .then((data: IMoviesResponse) => buildList(data.Search))
     .catch((error) => {
         throw new Error(error);
     }); 
