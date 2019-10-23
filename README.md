@@ -1,5 +1,5 @@
 # Movie-Search
-Practice exercise to consume an API using Fetch in Javascript and create an interactive user interface 
+First practice exercise to consume an API using Fetch in Javascript and create an interactive user interface. 
 
 ## Your Task
 Build an application using the OMDB api, Javascript Fetch and HTML/CSS to allow a user to view movies from an online database. The features are as follows: 
@@ -12,3 +12,6 @@ Build an application using the OMDB api, Javascript Fetch and HTML/CSS to allow 
 ​
 ### Super-extension
 5. Persistent favourites - a user's favourites remain on the page even if the page is refreshed!
+
+#### Current status 
+Completed the filter that works dynamically. Not started favourites portion yet. 

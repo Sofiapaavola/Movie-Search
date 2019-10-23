@@ -1,0 +1,238 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(//db.onlinewebfonts.com/c/f82a69a125aa89da6962d40cd065a786?family=Blackout);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Blackout";
+  src: url("//db.onlinewebfonts.com/t/f82a69a125aa89da6962d40cd065a786.eot");
+  src: url("//db.onlinewebfonts.com/t/f82a69a125aa89da6962d40cd065a786.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f82a69a125aa89da6962d40cd065a786.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f82a69a125aa89da6962d40cd065a786.woff") format("woff"), url("//db.onlinewebfonts.com/t/f82a69a125aa89da6962d40cd065a786.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f82a69a125aa89da6962d40cd065a786.svg#Blackout") format("svg");
+}
+
+nav {
+  background-color: #242582;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  z-index: 2;
+  height: 60px;
+  color: #F64C72;
+}
+
+nav .links {
+  height: 60px;
+  position: relative;
+}
+
+nav .links #page-title {
+  font-size: 40px;
+  margin: 5px;
+}
+
+nav .links #search-bar {
+  width: 300px;
+  height: 40px;
+  background: #242582;
+  border: #F64C72 2px solid;
+  font-size: 10pt;
+  color: #F64C72;
+  padding-left: 45px;
+  border-radius: 5px;
+}
+
+nav .links #search-bar:active, nav .links #search-bar:hover, nav .links #search-bar:focus {
+  outline: none;
+  background: white;
+}
+
+nav .links .content-for-movie-selectors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+}
+
+nav .links .movie-search-bar .icon {
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  margin-left: 30px;
+  top: 20px;
+  color: #F64C72;
+}
+
+nav .links .movie-extension-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .links .movie-extension-links h2 {
+  font-size: 20px;
+}
+
+nav .links .movie-extension-links h2:hover {
+  cursor: pointer;
+}
+
+nav .links .movie-extension-links h2div.dropdown {
+  position: relative;
+}
+
+nav .links .movie-extension-links h2div.dropdownul.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+nav .links .movie-extension-links h2div.dropdownul.dropdown-contentli {
+  display: none;
+  padding: none;
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  nav .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+#movie-list {
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 60px;
+  display: block;
+}
+
+#movie-list .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#movie-list .content li {
+  margin: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 300px;
+}
+
+#movie-list .content li img {
+  height: 400px;
+  width: 300px;
+  padding: 10px;
+}
+
+#movie-list .content li img:hover {
+  -webkit-transform: translate(-2px, -2px);
+  transform: translate(-2px, -2px);
+  -webkit-box-shadow: 0 0 5px #F64C72;
+  box-shadow: 0 0 5px #F64C72;
+}
+
+#movie-list .content li p {
+  padding: 4px;
+}
+
+body {
+  font-family: "Blackout", cursive;
+  font-size: 16px;
+  background-color: #2F2FA2;
+}
+/*# sourceMappingURL=main.css.map */
