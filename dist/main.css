@@ -98,14 +98,12 @@ nav {
       flex-direction: column;
       justify-content: space-around;
       margin-right: 10px; }
-      nav .links .movie-extension-links h2 {
+      nav .links .movie-extension-links h2, nav .links .movie-extension-links p {
         font-size: 20px; }
-        nav .links .movie-extension-links h2:hover {
+        nav .links .movie-extension-links h2:hover, nav .links .movie-extension-links p:hover {
           cursor: pointer; }
       nav .links .movie-extension-links div.dropdown {
         position: relative; }
-        nav .links .movie-extension-links div.dropdown p {
-          font-size: 20px; }
         nav .links .movie-extension-links div.dropdown ul.dropdown-content {
           display: none;
           position: absolute;

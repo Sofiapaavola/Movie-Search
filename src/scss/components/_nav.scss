@@ -60,7 +60,7 @@ nav {
       justify-content: space-around;
       margin-right: 10px;
 
-      h2 {
+      h2, p {
         font-size: 20px;
 
         &:hover {
@@ -70,10 +70,6 @@ nav {
 
       div.dropdown {
         position: relative;
-
-        p { 
-            font-size:20px;
-        }
 
         ul.dropdown-content {
           display: none;

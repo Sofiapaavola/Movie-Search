@@ -45,9 +45,11 @@ const buildList = (data: IMoviesResponse) => {
 }
 
 const filterMovies = (movies: IMovies[], year: number): IMovies[] => {
-    let filteredMovies = movies.filter(movie  => Number(movie.Year) === Number(year))
+    let filteredMovies = movies.filter(movie => Number(movie.Year) === Number(year))
     return filteredMovies;
 }
+
+// const buildDropdownList = 
 
 const giveMeTheYears = (movies: IMovies[]) => {
     let listOfYears = [];
@@ -58,12 +60,6 @@ const giveMeTheYears = (movies: IMovies[]) => {
     return listOfYears; 
 }
 
-//  const filterDropdown = (data: IMoviesResponse) => { 
-//     const ul = document.getElementsByClassName("dropdown-content");
-//     let li = document.createElement("li"); 
-//     li.innerHTML = dropdownContent(filterMovies());
-//     ul.append(li); 
-// }
 
 $("#filterTag").click(function(){
     $("#myDropdown").toggle();
