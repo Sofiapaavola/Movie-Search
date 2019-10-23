@@ -68,10 +68,8 @@ nav {
     nav ul.links #page-title {
       font-size: 40px;
       margin: 5px; }
-    nav ul.links .movie-extension-links li {
-      display: flex;
-      flex-direction: column;
-      align-content: flex-end; }
+    nav ul.links .content-for-movie-selectors {
+      display: flex; }
     nav ul.links .movie-search-bar .icon {
       position: absolute;
       top: 40%;
@@ -79,6 +77,14 @@ nav {
       margin-left: 30px;
       top: 20px;
       color: #F64C72; }
+    nav ul.links .movie-extension-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      nav ul.links .movie-extension-links li {
+        font-size: 20px; }
+        nav ul.links .movie-extension-links li:hover {
+          cursor: pointer; }
     @media (min-width: 576px) {
       nav ul.links {
         display: flex;

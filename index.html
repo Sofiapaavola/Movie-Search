@@ -9,19 +9,30 @@
         <link href="//db.onlinewebfonts.com/c/f82a69a125aa89da6962d40cd065a786?family=Blackout" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" media="screen" href="dist/main.css">
         <script src="https://kit.fontawesome.com/0bddc79600.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="dist/main.js" async defer type="module"></script>
     </head>
     <body>
         <nav>
             <ul class="links">
                 <li id="page-title">my flicks.</li>
-                <div class="movie-extension-links"> 
-                    <li>my faves.</li>
-                    <li>filter.</li>
-                </div>
-                <div class="movie-search-bar">
-                    <span class="icon"><i class="fa fa-search"></i></span>
-                    <li> <input id="search-bar" placeholder="Search for a movie..." type="search"> </li>
+                <div class="content-for-movie-selectors"> 
+                    <div class="movie-search-bar">
+                        <span class="icon"><i class="fa fa-search"></i></span>
+                        <li> <input id="search-bar" placeholder="Search for a movie..." type="search"> </li> 
+                    </div>
+                    <div class="movie-extension-links"> 
+                        <p id="favesTag">my faves.</p>
+                        <div class="dropdown"> 
+                            <p id="filterTag">filter.
+                                <ul id="myDropdown" class="dropdown-content">
+                                    <li>hi</li>
+                                    <li>ho</li>
+                                    <li>he</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </ul>
         </nav>

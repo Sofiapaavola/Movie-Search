@@ -19,35 +19,11 @@ nav {
             margin: 5px;
         }
 
-        .movie-extension-links { 
-            li { 
-            display: flex; 
-            flex-direction: column; 
-            align-content: flex-end;
-            }
-        }
-
-        .movie-search-bar .icon {
-                position: absolute;
-                top: 40%;
-                z-index: 1;
-                margin-left: 30px;
-                top: 20px;
-                color: $title-font-color;
-        }
-        
-        @include sm { 
-            display: flex; 
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
         li { 
             padding: 8px;
             font-size: 1.2em;
             font-weight: bold;
             
-
             #search-bar { 
                 width: 300px;
                 height: 40px;
@@ -64,7 +40,60 @@ nav {
                     outline:none;
                     background: white;
                 }
+   
             }
+        }
+
+        .content-for-movie-selectors { 
+            display: flex; 
+        }
+
+        .movie-search-bar .icon {
+                position: absolute;
+                top: 40%;
+                z-index: 1;
+                margin-left: 30px;
+                top: 20px;
+                color: $title-font-color;
+        }
+
+        .movie-extension-links { 
+            display: flex; 
+            flex-direction: column;
+            justify-content: space-around;
+
+            li { 
+                font-size: 20px;
+
+                &:hover { 
+                    cursor: pointer;
+                }
+
+                .dropdown {
+                    position: relative;
+            
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        background-color: #f1f1f1;
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        z-index: 1;
+        
+                        li { 
+                            display: none; 
+                            padding: none;
+                            font-size: $font-size; 
+                        }
+                    }
+                }
+            }
+        }
+        
+        @include sm { 
+            display: flex; 
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
 }

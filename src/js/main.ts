@@ -10,6 +10,10 @@ const movieText = (title, year) => {
     return `<li><p>"${title}"</p> <p>"${year}"</p></li> `
 }
 
+const dropdownContent = (year) => { 
+    return `<li>"${year}</li>`
+}
+
 export interface IMovies {
     Title: string,
     Year: number,
@@ -19,17 +23,9 @@ export interface IMovies {
     Search: IMovies[],
 }
 
-// const searchMovies = () => { 
-//     const userInput = document.getElementById("search-bar") as HTMLInputElement;
-//     movieName = userInput.value; 
-//     movieInfo(movieName); 
-// }
-
 const searchEvent = document.getElementById("search-bar");
 searchEvent.addEventListener("keyup", (event) => {
-   console.log(event);
    if (event.keyCode === 13) {
-       console.log("in here");
        const filmToSearch =  (<HTMLInputElement>document.getElementById("search-bar")).value;
        const filmUrl = `http://www.omdbapi.com/?s=${filmToSearch}&apikey=94d4e1cf`;
        movieInfo(filmUrl);
@@ -45,6 +41,22 @@ const buildList = (data: IMoviesResponse) => {
         ul.append(li);
     })
 }
+
+export const filterMovies = (movies: IMovies[], year: number): IMovies[] => {
+    let filteredMovies = movies.filter(movie  => Number(movie.Year) === Number(year))
+    return filteredMovies;
+ }
+
+ const filterDropdown = document.getElementById("filterTag"); 
+filterDropdown.addEventListener("click", (event) => { 
+    const ul = document.getElementsByClassName("filterContent")[1];
+   
+        movieInfo(filmUrl);
+})
+
+$("#filterTag").click(function(){
+    $("#myDropdown").toggle();
+});
 
 const movieInfo = (url: string) => {  
     fetch(url)
