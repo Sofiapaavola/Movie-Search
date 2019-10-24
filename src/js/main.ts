@@ -2,6 +2,10 @@
 let movieName = "war"; 
 let url = `https://www.omdbapi.com/?s=${movieName}&apikey=b8f7779`; 
 
+// const initialPage = () => { 
+
+// }
+
 const imageSource = (movieUrl) => { 
     return `<img src="${movieUrl}"></img>`
 }  
@@ -60,7 +64,6 @@ const giveMeTheYears = (movies: IMovies[]) => {
         let movieYears = movie.Year;
         listOfYears.push(movieYears); 
     })
-    console.log(listOfYears);
     return listOfYears; 
 
 }

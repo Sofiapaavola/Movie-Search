@@ -63,11 +63,15 @@ nav {
   color: #F64C72; }
   nav .links {
     height: 60px;
-    position: relative; }
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
     nav .links #page-title {
       font-size: 40px;
       margin: 5px;
-      padding: 10px; }
+      padding: 10px;
+      cursor: pointer; }
     nav .links #search-bar {
       width: 300px;
       height: 40px;
@@ -113,11 +117,15 @@ nav {
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           z-index: 1;
           font-family: Arial, Helvetica, sans-serif; }
-    @media (min-width: 576px) {
-      nav .links {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between; } }
+
+@media only screen and (max-width: 600px) {
+  nav {
+    height: 150px; }
+    nav .links {
+      flex-wrap: wrap;
+      justify-content: center; }
+      nav .links .movie-search-bar .icon {
+        display: none; } }
 
 #movie-list {
   height: 100vh;
