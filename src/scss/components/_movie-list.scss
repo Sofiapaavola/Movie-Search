@@ -43,3 +43,9 @@
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    #movie-list {
+        margin-top: $mobile-navbar-height;
+        }
+  }
