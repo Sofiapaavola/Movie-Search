@@ -94,7 +94,7 @@ nav {
 
 @media only screen and (max-width: 600px) {
   nav {
-    height: 150px;;
+    height: $mobile-navbar-height;
 
     .links {
       flex-wrap: wrap;

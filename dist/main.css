@@ -162,6 +162,10 @@ nav {
       #movie-list .content li p {
         padding: 4px; }
 
+@media only screen and (max-width: 600px) {
+  #movie-list {
+    margin-top: 150px; } }
+
 html ::-webkit-scrollbar {
   display: none; }
 
