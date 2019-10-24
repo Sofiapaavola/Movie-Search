@@ -60,7 +60,6 @@ const giveMeTheYears = (movies: IMovies[]) => {
         let movieYears = movie.Year;
         listOfYears.push(movieYears); 
     })
-    console.log(listOfYears);
     return listOfYears; 
 
 }
