@@ -67,7 +67,8 @@ nav {
     nav .links #page-title {
       font-size: 40px;
       margin: 5px;
-      padding: 10px; }
+      padding: 10px;
+      cursor: pointer; }
     nav .links #search-bar {
       width: 300px;
       height: 40px;
