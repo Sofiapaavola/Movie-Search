@@ -89,11 +89,21 @@ nav {
         }
       }
     }
+  }
+}
 
-    @include sm {
-      // display: flex;
-      // flex-direction: row;
-      // justify-content: space-between;
+@media only screen and (max-width: 600px) {
+  nav {
+    height: 150px;;
+
+    .links {
+      flex-wrap: wrap;
+      justify-content: center;
+      
+      .movie-search-bar .icon {
+        display: none;
+      }
     }
   }
 }
+
