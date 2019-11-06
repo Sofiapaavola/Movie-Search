@@ -21,4 +21,4 @@ Build an application using the OMDB api, Javascript Fetch and HTML/CSS to allow 
 3. Learned that the mixins were intially started improperly and therefore the responsivenes is created through normal media queries rather than mixins. 
 
 #### Setup 
-The project comes with a webpack configuration. Users will need to run npm install to get all the relevant packages as outlined in the package json file.
+The project comes with a webpack configuration. Users will need to run npm install to get all the relevant packages as outlined in the package json file. Find it here: https://sofiapaavola.github.io/Movie-Search/
